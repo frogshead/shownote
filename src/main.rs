@@ -1,4 +1,9 @@
-use std::{fs, str::FromStr};
+use std::process::Command;
+use std::{
+    env,
+    fs, io,
+    str::FromStr,
+};
 
 use opml::{self, OPML};
 use reqwest;
@@ -22,27 +27,58 @@ pub struct Podcast {
 }
 
 fn main() {
-    let file_name = "src/fav-podcasts.opml";
+    let mut file_name = "src/fav-podcasts.opml".to_string();
+    let args: Vec<String> = env::args().collect();
+    if args.len() > 1 {
+        file_name = args[1].to_string()
+    }
+    println!("{:?}", args);
     let podcasts = get_podcasts(&file_name);
-    get_episodes(podcasts.iter().nth(17).unwrap());
+    let selection = print_podcasts(&podcasts);
+    get_episodes(podcasts.iter().nth(selection.into()).unwrap());
+}
+
+fn print_podcasts(podcasts: &Vec<Podcast>) -> u8 {
+    for (pos, podcast) in podcasts.into_iter().enumerate() {
+        println!(
+            "[{}] {} - {}",
+            pos,
+            podcast.name,
+            podcast.url.as_ref().unwrap_or(&"default".to_string())
+        )
+    }
+    let mut buffer = String::new();
+    io::stdin().read_line(&mut buffer).unwrap();
+    println!("Read: {}", buffer);
+    let selection: u8 = buffer.trim().parse().unwrap();
+    selection
 }
 fn get_episodes(podcast: &Podcast) {
     println!("Fetching podcast feed {}... ", podcast.name);
     let url = podcast.url.as_ref().unwrap();
     let c = reqwest::blocking::get(url).unwrap().text().unwrap();
     let rss = rss::Channel::from_str(&c).unwrap();
+
     println!("{} has {} episodes", podcast.name, rss.items.len());
     let content = rss.items.iter().nth(0).unwrap().content.as_ref().unwrap();
-
     Document::from(content.as_str())
         .find(Name("a"))
         .filter_map(|n| n.attr("href"))
-        .for_each(|x| println!("{}", x));
+        .for_each(|x| ff(x));
 }
+fn ff(url: &str) -> () {
+    if cfg!(macos) {
+        Command::new(r#"open"#).arg(url).spawn().unwrap();
+    }else if cfg!(windwos){
+        Command::new(r#"start"#).arg(url).spawn().unwrap();
+    }else{
+        Command::new(r#"open"#).arg(url).spawn().unwrap();
+    }
+}
+
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
     let xml = fs::read_to_string(file_name).expect("Reading the file failed");
     let opml = OPML::new(&xml).expect("Non Valid OPML/XML file");
-    println!("Version: {:?}", opml.version);
 
     let mut podcasts = vec![];
     for outline in opml.body.outlines {
@@ -57,7 +93,6 @@ fn get_podcasts(file_name: &str) -> Vec<Podcast> {
             feed: Feed::Rss,
             description: outline.description,
         };
-        println!("[]{} - {:?}", podcast.name, podcast.url);
         podcasts.push(podcast);
     }
     println!();
