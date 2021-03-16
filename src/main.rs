@@ -1,9 +1,5 @@
 use std::process::Command;
-use std::{
-    env,
-    fs, io,
-    str::FromStr,
-};
+use std::{env, fs, io, str::FromStr};
 
 use opml::{self, OPML};
 use reqwest;
@@ -69,10 +65,13 @@ fn get_episodes(podcast: &Podcast) {
 fn ff(url: &str) -> () {
     if cfg!(macos) {
         Command::new(r#"open"#).arg(url).spawn().unwrap();
-    }else if cfg!(windwos){
-        Command::new(r#"start"#).arg(url).spawn().unwrap();
-    }else{
-        Command::new(r#"open"#).arg(url).spawn().unwrap();
+    } else {
+        Command::new("cmd")
+            .arg("/c")
+            .arg("start")
+            .arg(url)
+            .spawn()
+            .expect(url);
     }
 }
 
