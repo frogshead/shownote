@@ -1,9 +1,5 @@
 use std::process::Command;
-use std::{
-    env,
-    fs, io,
-    str::FromStr,
-};
+use std::{env, fs, io, str::FromStr};
 
 use opml::{self, OPML};
 use reqwest;
