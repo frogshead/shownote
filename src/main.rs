@@ -63,15 +63,10 @@ fn get_episodes(podcast: &Podcast) {
         .for_each(|x| ff(x));
 }
 fn ff(url: &str) -> () {
-    if cfg!(macos) {
+    if cfg!(windwos){
+        Command::new(r#"start"#).arg(url).spawn().unwrap();
+    }else{
         Command::new(r#"open"#).arg(url).spawn().unwrap();
-    } else {
-        Command::new("cmd")
-            .arg("/c")
-            .arg("start")
-            .arg(url)
-            .spawn()
-            .expect(url);
     }
 }
 
