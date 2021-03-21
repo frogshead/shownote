@@ -60,14 +60,21 @@ fn get_episodes(podcast: &Podcast) {
     Document::from(content.as_str())
         .find(Name("a"))
         .filter_map(|n| n.attr("href"))
-        .for_each(|x| ff(x));
+        .for_each(|x| open_urls_to_browser(x));
 }
-fn ff(url: &str) -> () {
-    if cfg!(windwos){
-        Command::new(r#"start"#).arg(url).spawn().unwrap();
-    }else{
-        Command::new(r#"open"#).arg(url).spawn().unwrap();
+fn open_urls_to_browser(url: &str) -> () {
+    
+    let mut command = "open";
+
+    if cfg!(target_os = "windows"){
+        command = "start";
+    }if cfg!(target_os = "linux"){
+        command = "xdg-open";
     }
+        match Command::new(command).arg(url).spawn()  {
+            Ok(_) => {}
+            Err(_) => {println!("{}", url)}
+        }
 }
 
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
