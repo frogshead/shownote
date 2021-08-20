@@ -1,11 +1,11 @@
 use std::{env, fs, io, str::FromStr};
 
 use opml::{self, OPML};
+use webbrowser;
 use reqwest;
 use rss;
 use select::document::Document;
 use select::predicate::Name;
-use webbrowser;
 
 #[derive(Debug)]
 #[allow(dead_code)]
@@ -69,7 +69,7 @@ fn open_urls_to_browser(url: &str) -> () {
 
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
     let xml = fs::read_to_string(file_name).expect("Reading the file failed");
-    let opml = OPML::new(&xml).expect("Non Valid OPML/XML file");
+    let opml = OPML::from_str(&xml).expect("Non Valid OPML/XML file");
 
     let mut podcasts = vec![];
     for outline in opml.body.outlines {
