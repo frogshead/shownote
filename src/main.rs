@@ -1,4 +1,3 @@
-use std::process::Command;
 use std::{env, fs, io, str::FromStr};
 
 use opml::{self, OPML};
@@ -6,6 +5,7 @@ use reqwest;
 use rss;
 use select::document::Document;
 use select::predicate::Name;
+use webbrowser;
 
 #[derive(Debug)]
 #[allow(dead_code)]
@@ -57,24 +57,14 @@ fn get_episodes(podcast: &Podcast) {
 
     println!("{} has {} episodes", podcast.name, rss.items.len());
     let content = rss.items.iter().nth(0).unwrap().content.as_ref().unwrap();
+    
     Document::from(content.as_str())
         .find(Name("a"))
         .filter_map(|n| n.attr("href"))
         .for_each(|x| open_urls_to_browser(x));
 }
 fn open_urls_to_browser(url: &str) -> () {
-    
-    let mut command = "open";
-
-    if cfg!(target_os = "windows"){
-        command = "start";
-    }if cfg!(target_os = "linux"){
-        command = "xdg-open";
-    }
-        match Command::new(command).arg(url).spawn()  {
-            Ok(_) => {}
-            Err(_) => {println!("{}", url)}
-        }
+    webbrowser::open(url).unwrap();
 }
 
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
