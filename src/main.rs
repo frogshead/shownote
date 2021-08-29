@@ -1,4 +1,4 @@
-use std::{env, fs, io, str::FromStr};
+use std::{env, io, str::FromStr};
 
 use opml::{self, OPML};
 use webbrowser;
@@ -23,13 +23,13 @@ pub struct Podcast {
 }
 
 fn main() {
-    let mut file_name = "src/fav-podcasts.opml".to_string();
+    let mut podcasts_url = "https://raw.githubusercontent.com/frogshead/shownote/main/src/fav-podcasts.opml".to_string();
     let args: Vec<String> = env::args().collect();
     if args.len() > 1 {
-        file_name = args[1].to_string()
+        podcasts_url = args[1].to_string()
     }
     println!("{:?}", args);
-    let podcasts = get_podcasts(&file_name);
+    let podcasts = get_podcasts(&podcasts_url);
     let selection = print_podcasts(&podcasts);
     get_episodes(podcasts.iter().nth(selection.into()).unwrap());
 }
@@ -64,23 +64,20 @@ fn get_episodes(podcast: &Podcast) {
         .for_each(|x| open_urls_to_browser(x));
 }
 fn open_urls_to_browser(url: &str) -> () {
-    webbrowser::open(url).unwrap();
+    match webbrowser::open(url){
+        Ok(_) => (),
+        Err(_) => println!("Cannot open shownote url: {}", url)
+    }
 }
 
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
-    let xml = fs::read_to_string(file_name).expect("Reading the file failed");
+    let xml: String = reqwest::blocking::get(file_name).expect("Can not fetch the opml from url").text().unwrap();
     let opml = OPML::from_str(&xml).expect("Non Valid OPML/XML file");
-
     let mut podcasts = vec![];
     for outline in opml.body.outlines {
         let podcast: Podcast = Podcast {
             name: outline.text,
             url: outline.xml_url,
-            // feed: match outline.type {
-            //     Some(feed_type) => Feed::Rss,
-            //     None => Feed::Rss
-
-            // },
             feed: Feed::Rss,
             description: outline.description,
         };
