@@ -2,16 +2,18 @@
 <opml version="2.0">
   <head>
     <title>freezing_point</title>
-    <dateCreated>Sat, 13 Mar 2021 14:46:13 +0000</dateCreated>
+    <dateCreated>Thu, 28 Oct 2021 10:45:22 +0000</dateCreated>
   </head>
   <body>
     <outline xmlUrl="http://embedded.fm/episodes?format=rss" description="Embedded is the show for people who love gadgets. Making them, breaking them,
 and everything in between. Weekly interviews with engineers, educators, and
 enthusiasts. Find the show, blog, and more at embedded.fm." type="rss" htmlUrl="https://embedded.fm/" title="Embedded" text="Embedded"/>
     <outline xmlUrl="https://rss.simplecast.com/podcasts/9084/rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feeds.fireside.fm/ctcn/rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-1792200.rss" description="Suomessa asuu viisi miljoonaa ihmistä ja heillä on viisi miljoonaa tapaa elää.
 Tässä ohjelmassa tutustutaan muutamiin niistä. Toimittajina Perttu Häkkinen ja
-Panu Hietaneva." type="rss" htmlUrl="https://areena.yle.fi/1-1792200" title="Perttu Häkkinen" text="Perttu Häkkinen"/>
+Panu Hietaneva. Perttu Häkkisen kuratoidut uusinnat Yle Puheessa 16.2.2021
+alkaen tiistaisin klo 13.02." type="rss" htmlUrl="https://areena.yle.fi/1-1792200" title="Perttu Häkkinen" text="Perttu Häkkinen"/>
     <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-3356709.rss?lang=fi&amp;downloadable=true" description="Vikasietotila on podcast tietotekniikasta, sen käyttäjistä ja vaikutuksista.
 Jokaisessa jaksossa käsitellään yksi teema. Ohjelma saattaa sisältää pieniä
 määriä hyötytietoa ja päällekkäinpuhumista. Vikasietotila ovat Kari Haakana,
@@ -19,6 +21,7 @@ Panu Räty ja Olli Sulopuisto. Jaksot ja paljon muuta osoitteessa
 yle.fi/vikasietotila. Twitterissä #vikasietotila" type="rss" htmlUrl="https://areena.yle.fi/1-3356709" title="Vikasietotila" text="Vikasietotila"/>
     <outline xmlUrl="http://backtracks.fm/macrofab/macrofab-engineering-podcast/feed" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="http://thesparkgap.net/rss/" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feeds.soundcloud.com/users/soundcloud%3Ausers%3A721404514/sounds.rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://www.dataengineeringpodcast.com/feed/mp3/" description="This show goes behind the scenes for the tools, techniques, and difficulties
 associated with the discipline of data engineering. Databases, workflows,
 automation, and data manipulation are just some of the topics that you will
@@ -32,6 +35,13 @@ unittest. However, well over half of the topics are language agnostic, such as
 data science, DevOps, TDD, public speaking, mentoring, feature testing, NoSQL
 databases, end to end testing, automation, continuous integration, development
 methods, Selenium, the testing pyramid, and DevOps." type="rss" htmlUrl="https://testandcode.com" title="Test &amp; Code : Python Testing for Software Engineering" text="Test &amp; Code : Python Testing for Software Engineering"/>
+    <outline xmlUrl="https://bellingcat.libsyn.com/rss" description="The Bellingcat Podcast takes an in depth look at investigations that used open
+source material and cutting edge investigation techniques to investigate a
+range of topics. Season 1 examines the downing of MH17, Season 2 focuses on
+the investigation that revealed the killers of two women and two young
+children executed at a roadside in Cameroon. \--- For more information on our
+investigations please visit www.bellingcat.com To support our work and to
+access exclusive content please donate via www.patreon.com/bellingcat" type="rss" htmlUrl="https://bellingcat.com" title="The Bellingcat Podcast" text="The Bellingcat Podcast"/>
     <outline xmlUrl="http://testandcode.com/rss" description="Test &amp; Code is a weekly podcast hosted by Brian Okken. The show covers a wide
 array of topics including software engineering, development, testing, Python
 programming, and many related topics. When we get into the implementation
@@ -39,10 +49,12 @@ specifics, that's usually Python, such as Python packaging, tox, pytest, and
 unittest. However, well over half of the topics are language agnostic, such as
 data science, DevOps, TDD, public speaking, mentoring, feature testing, NoSQL
 databases, end to end testing, automation, continuous integration, development
-methods, Selenium, the testing pyramid, and DevOps." type="rss" htmlUrl="https://testandcode.com" title="Test &amp; Code : Python Testing for Software Engineering" text="Test &amp; Code : Python Testing for Software Engineering"/>
+methods, Selenium, the testing pyramid, and DevOps." type="rss" htmlUrl="https://testandcode.com" title="Test &amp; Code" text="Test &amp; Code"/>
     <outline xmlUrl="http://feeds.soundcloud.com/users/soundcloud%3Ausers%3A156278369/sounds.rss" description="Nordnetin #rahapodi on podcast, jossa puhumme tal…" type="rss" htmlUrl="https://blogi.nordnet.fi/rahapodi/" title="#rahapodi" text="#rahapodi"/>
     <outline xmlUrl="http://softwareengineeringdaily.com/feed/podcast" description="Technical interviews about software topics." type="rss" htmlUrl="http://softwareengineeringdaily.com" title="Software Engineering Daily" text="Software Engineering Daily"/>
+    <outline xmlUrl="https://anchor.fm/s/5a87b0f4/podcast/rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="http://macrofabpodcast.libsyn.com/rsss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feeds.simplecast.com/poJwcaOP" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://hackaday.libsyn.com/rss" description="Hackaday Editors take a look at all of the interesting uses of technology that
 pop up on the internet each week. Topics cover a wide range like bending
 consumer electronics to your will, designing circuit boards, building robots,
@@ -90,10 +102,10 @@ and everything in between. Weekly interviews with engineers, educators, and
 enthusiasts. Find the show, blog, and more at embedded.fm." type="rss" htmlUrl="https://embedded.fm/" title="Embedded" text="Embedded"/>
     <outline xmlUrl="https://rusty-spike.blubrry.net/feed/podcast/" description="A weekly news podcast covering the Rust programming language and the Servo
 browser engine." type="rss" htmlUrl="https://rusty-spike.blubrry.net" title="Rusty Spike Podcast – News on all things Rust" text="Rusty Spike Podcast – News on all things Rust"/>
-    <outline xmlUrl="https://www.podcastinit.com/feed/mp3/" description="The weekly podcast about the Python programming language, its ecosystem, and
-its community. Tune in for engaging, educational, and technical discussions
-about the broad range of industries, individuals, and applications that rely
-on Python." type="rss" htmlUrl="https://www.pythonpodcast.com" title="The Python Podcast.__init__" text="The Python Podcast.__init__"/>
+    <outline xmlUrl="https://www.podcastinit.com/feed/mp3/" description="The weekly podcast about Python and its use in science, research, and data.
+Tune in for engaging, educational, and technical discussions about machine
+learning, artificial intelligence, data science, and scientific research that
+is powered by Python." type="rss" htmlUrl="https://www.pythonpodcast.com" title="The Python Data &amp; Science Podcast.__init__" text="The Python Data &amp; Science Podcast.__init__"/>
     <outline xmlUrl="http://feeds.feedburner.com/Hanselminutes" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
 promotes fresh technology and fresh voices. Talk and Tech for Developers,
 Life-long Learners, and Technologists." type="rss" htmlUrl="https://www.hanselminutes.com" title="Hanselminutes with Scott Hanselman" text="Hanselminutes with Scott Hanselman"/>
@@ -108,6 +120,7 @@ of the planet” -- but if you're their kind of nerd, you'll find yourself
 hanging on every word!" type="rss" htmlUrl="https://onthemetal.fm" title="On The Metal" text="On The Metal"/>
     <outline xmlUrl="https://mcsorleys.barstoolsports.com/feed/spittin-chiclets" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://embedded.fm/episodes?format=rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://contextualelectronics.com/feed/podcast/" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="http://feeds.feedburner.com/EnglishAsASecondLanguagePodcast" description="English as a Second Language Podcast is for anyone who wants to improve their
 English speaking and listening skills." type="rss" htmlUrl="https://www.eslpod.com" title="English as a Second Language (ESL) Podcast - Learn English Online" text="English as a Second Language (ESL) Podcast - Learn English Online"/>
     <outline xmlUrl="https://feeds.pacific-content.com/commandlineheroes" description="Hear the epic true tales of how developers, programmers, hackers, geeks, and
@@ -115,7 +128,8 @@ open source rebels are revolutionizing the technology landscape. Command Line
 Heroes is an award-winning podcast hosted by Saron Yitbarek and produced by
 Red Hat. Get root access to show notes, transcripts, and other associated
 content at https://redhat.com/commandlineheroes" type="rss" htmlUrl="https://www.redhat.com/en/command-line-heroes" title="Command Line Heroes" text="Command Line Heroes"/>
-    <outline xmlUrl="https://feeds.simplecast.com/fJGOlywC" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feeds.simplecast.com/fJGOlywC" description="Ajankohtaista kyberiä, melkein Suomen kielellä. Käräjillä mukana Antti
+Kurittu, Laura Kankaala ja Juho Jauhiainen. Tunnusmusiikki: Samuel Bäckström" type="rss" htmlUrl="https://turvakarajat.fi" title="Turvakäräjät" text="Turvakäräjät"/>
     <outline xmlUrl="https://rss.simplecast.com/podcasts/6759/rss" description="Each week our hosts will discuss their development experiences. We'll talk
 about Ruby, Rust, Go, and anything else that has drawn our interest this week.
 Subscribe below to be notified when new episodes are published!" type="rss" htmlUrl="http://yakshave.fm" title="The Yak Shave" text="The Yak Shave"/>
@@ -125,18 +139,20 @@ Life-long Learners, and Technologists." type="rss" htmlUrl="https://www.hanselmi
     <outline xmlUrl="https://rss.simplecast.com/podcasts/4497/rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://tlbhit.libsyn.com/rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://reverseengineering.libsyn.com/rss" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://talkpython.fm/episodes/rss" description="Talk Python to Me is a weekly podcast hosted by Michael Kennedy. The show
-covers a wide array of Python topics as well as many related topics. Our goal
-is to bring you the human story behind the Python packages and frameworks you
-know and love." type="rss" htmlUrl="https://talkpython.fm/" title="Talk Python To Me" text="Talk Python To Me"/>
-    <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-3945773.rss?lang=fi&amp;downloadable=true" description="Kohtaamisia syvässä päässä. Juuso Pekkinen etsii suurempaa ymmärrystä
-ympäröivästä todellisuudesta ja tarjoilee hydraatiota intohimoiseen
-tiedonjanoon." type="rss" htmlUrl="https://areena.yle.fi/1-3945773" title="Juuso Pekkinen" text="Juuso Pekkinen"/>
+    <outline xmlUrl="https://talkpython.fm/episodes/rss" description="Talk Python to Me is a weekly podcast hosted by developer and entrepreneur
+Michael Kennedy. We dive deep into the popular packages and software
+developers, data scientists, and incredible hobbyists doing amazing things
+with Python. If you're new to Python, you'll quickly learn the ins and outs of
+the community by hearing from the leaders. And if you've been Pythoning for
+years, you'll learn about your favorite packages and the hot new ones coming
+out of open source." type="rss" htmlUrl="https://talkpython.fm/" title="Talk Python To Me" text="Talk Python To Me"/>
+    <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-3945773.rss?lang=fi&amp;downloadable=true" description="Juuso Pekkinen etsii suurempaa ymmärrystä ympäröivästä todellisuudesta ja
+tarjoilee hydraatiota intohimoiseen tiedonjanoon. Maanantaisin Yle Puhe ja Yle
+Areena." type="rss" htmlUrl="https://areena.yle.fi/1-3945773" title="Juuso Pekkinen" text="Juuso Pekkinen"/>
     <outline xmlUrl="http://rss.acast.com/valeaidinnauhoitukset" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-50082686.rss?lang=fi&amp;downloadable=true" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://podcasts.files.bbci.co.uk/p07nkd84.rss" description="Dr Ruja Ignatova persuaded millions to join her financial revolution. Then she
-disappeared. Why? Jamie Bartlett presents a story of greed, deceit and herd
-madness." type="rss" htmlUrl="http://www.bbc.co.uk/programmes/p07nkd84" title="The Missing Cryptoqueen" text="The Missing Cryptoqueen"/>
+    <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-50082686.rss?lang=fi&amp;downloadable=true" description="Hallituskriisi! Velka! Sote! Mistä politiikassa nousi haloo tällä viikolla?
+Toimittajat Olli Seuri, Helmiina Suhonen ja Robert Sundman laittavat
+analyysissään asiat mittasuhteisiin. #jetp" type="rss" htmlUrl="https://areena.yle.fi/1-50082686" title="Jaa, ei, tyhjiä, poissa" text="Jaa, ei, tyhjiä, poissa"/>
     <outline xmlUrl="http://kisstherose.libsyn.com/rss" description="Sexy Stories with Rose Caraway and her friends will arouse your senses and
 inflame your imagination with delicious tales of love, lust, loss, romance,
 suspense, erotic horror, and adventure! Come, experience intense fantasies
@@ -145,7 +161,13 @@ wanting more! Enjoy the best erotica authors today as they show off their
 limitless imaginations with smart, provocative stories, with just the right
 amount of moxie and sensuality! This show is for adults only." type="rss" htmlUrl="http://www.thekissmequicks.com/" title="The Kiss Me Quick's Erotica" text="The Kiss Me Quick's Erotica"/>
     <outline xmlUrl="https://talkaboutsec.libsyn.com/rss" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="http://unchained.libsyn.com/unchained" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="http://unchained.libsyn.com/unchained" description="Crypto assets and blockchain technology are about to transform every trust-
+based interaction of our lives, from financial services to identity to the
+Internet of Things. In this podcast, host Laura Shin, an independent
+journalist covering all things crypto, talks with industry pioneers about how
+crypto assets and blockchains will change the way we earn, spend and invest
+our money. Tune in to find out how Web 3.0, the decentralized web, will
+revolutionize our world. Disclosure: I'm a nocoiner." type="rss" htmlUrl="https://unchainedpodcast.com" title="Unchained" text="Unchained"/>
     <outline xmlUrl="https://theamphour.com/feed/podcast" description="Chris Gammell and Dave Jones' voices span the chasm of thousands of miles each
 and every week to speak to each other and industry experts about where the
 field of electronics is moving. Whether it be a late breaking story about a
@@ -162,13 +184,14 @@ programming language. We cover technical topics as well as the business of
 open source and commercial indie games development." type="rss" htmlUrl="https://rustgamedev.com" title="Rust Game Dev" text="Rust Game Dev"/>
     <outline xmlUrl="https://stackoverflow.blog/podcasts/?feed=podcast" description="The Stack Overflow podcast is a weekly conversation about working in software
 development, learning to code, and the art and culture of computer
-programming. Hosted by Sara Chipps, Paul Ford, and Ben Popper, the series will
-feature questions from our community, interviews with fascinating guests, and
-hot takes on what’s happening in tech. About Stack Overflow Founded in 2008,
-Stack Overflow is the largest, most trusted online community for developers to
-learn, share their knowledge, and build their careers. More than 50 million
-professional and aspiring programmers visit Stack Overflow each month to help
-solve coding problems, develop new skills, and find job opportunities." type="rss" htmlUrl="https://stackoverflow.blog/podcast/" title="The Stack Overflow Podcast" text="The Stack Overflow Podcast"/>
+programming. Hosted by Paul Ford and Ben Popper, the series features questions
+from our community, interviews with fascinating guests, and hot takes on
+what’s happening in tech. Founded in 2008, Stack Overflow is empowering the
+world to develop technology through collective knowledge. It’s best known for
+being the largest, most trusted online community for developers and
+technologists. More than 100 million people come to Stack Overflow every month
+to ask questions, help solve coding problems, and develop new skills." type="rss" htmlUrl="https://stackoverflow.blog/podcast/" title="The Stack Overflow Podcast" text="The Stack Overflow Podcast"/>
+    <outline xmlUrl="https://feeds.transistor.fm/break-things-on-purpose-7790d923-3197-451b-8643-92f6f2d650c2" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="http://www.newrustacean.com/feed.xml" description="Deep dive teaching episodes, news updates, and interviews with people around
 the Rust community." type="rss" htmlUrl="https://newrustacean.com" title="New Rustacean" text="New Rustacean"/>
     <outline xmlUrl="https://askelpalautin.fi/podcast/" description="" type="rss" htmlUrl="" title="" text=""/>
@@ -179,8 +202,12 @@ a distinctly East Coast point of view. Decades of experience inform their no-
 BS, quick-witted patter about what digital transformation really means.
 Created by Postlight, the digital product studio they co-founded in New York
 City" type="rss" htmlUrl="https://postlight.com/podcast/" title="Postlight Podcast" text="Postlight Podcast"/>
-    <outline xmlUrl="http://iotpodcast.com/feed/podcast/" description="Stacey Higginbotham has covered technology since 2001. In my years covering
-tech I became more fascinated by the stuff were were able to do on vast
+    <outline xmlUrl="http://iotpodcast.com/feed/podcast/" description="Internet of Things news and analysis: smart home, industrial internet of
+things, enterprise internet of things, and more. Joins co-hosts Stacey
+Higginbotham and Kevin Tofel as they dissect the week's latest IoT news.  
+  
+Stacey Higginbotham has covered technology since 2001. In my years covering
+tech I became more fascinated by the stuff we were able to do on vast
 computing networks and ever speedier mobile and wireline broadband networks.
 Finally all of the elements of the technology I’ve covered in more than a
 decade have culminated in this moment and we’re creating the internet of
@@ -207,11 +234,15 @@ people he enjoys most and perhaps find some real friendship along the way." type
 exploration of modern life and how to survive it.&quot; - The Guardian. Hosted by
 PJ Vogt and Alex Goldman, from Gimlet." type="rss" htmlUrl="http://gimletmedia.com/shows/reply-all" title="Reply All" text="Reply All"/>
     <outline xmlUrl="https://rustacean-station.org/podcast.rss" description="Come journey with us into the weird, wonderful, and wily world of Rust." type="rss" htmlUrl="https://rustacean-station.org" title="Rustacean Station" text="Rustacean Station"/>
-    <outline xmlUrl="https://kisstherose.libsyn.com/rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://kisstherose.libsyn.com/rss" description="Fueled by art, sexuality, playfulness, adventure, and imagination, Rose &amp; Dayv
+Caraway will arouse your senses with libidinous tales of love, loss, action,
+adventure, romance, suspense, horror, science fiction, paranormal, and
+fantasy. Brimming with limitless creativity and moxie these erotic stories are
+sure to seduce your thoughts and leave you and your partner(s) wanting more!
+This show is for adults only." type="rss" htmlUrl="http://www.thekissmequicks.com/" title="The Kiss Me Quick's Erotica" text="The Kiss Me Quick's Erotica"/>
     <outline xmlUrl="http://feeds.soundcloud.com/users/soundcloud%3Ausers%3A319162419/sounds.rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://rss.podplaystudio.com/921.xml" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://feeds.acast.com/public/shows/604244258d3f3e6666051ce8" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://www.theconstructsim.com/wp-content/plugins/leaflet-maps-marker/leaflet-georss.php?layer=all" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://pythonbytes.fm/episodes/rss" description="Python Bytes is a weekly podcast hosted by Michael Kennedy and Brian Okken.
 The show is a short discussion on the headlines and noteworthy news in the
 Python, developer, and data science space." type="rss" htmlUrl="https://pythonbytes.fm/" title="Python Bytes" text="Python Bytes"/>
@@ -221,7 +252,10 @@ Python, developer, and data science space." type="rss" htmlUrl="https://pythonby
     <outline xmlUrl="https://anchor.fm/s/402b4b80/podcast/rss" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://feeds.simplecast.com/MawZsBY4" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://jamesmunns.com/podcast-feed-flac.xml" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://feed.syntax.fm/rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feed.syntax.fm/rss" description="Full Stack Developers Wes Bos and Scott Tolinski dive deep into web
+development topics, explaining how they work and talking about their own
+experiences. They cover from JavaScript frameworks like React, to the latest
+advancements in CSS to simplifying web tooling." type="rss" htmlUrl="https://syntax.fm" title="Syntax - Tasty Web Development Treats" text="Syntax - Tasty Web Development Treats"/>
     <outline xmlUrl="https://rss.acast.com/suomensuosituinpodcast" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://feeds.soundcloud.com/users/soundcloud%3Ausers%3A206137365/sounds.rss" description="A podcast featuring panelists of engineers from N…" type="rss" htmlUrl="http://frontendhappyhour.com/" title="Front End Happy Hour" text="Front End Happy Hour"/>
     <outline xmlUrl="http://audioboom.com/channels/1405050.rss" description="The Cycling Podcast Join journalists Richard Moore, Lionel Birnie and Daniel
@@ -233,7 +267,13 @@ Richard Moore is the author of Slaying the Badger and Sky’s the Limit, Daniel
 Friebe writes for Procycling and is author of The Cannibal, a biography of
 five-time Tour winner Eddy Merckx, and Lionel Birnie is co-editor of The
 Cycling Anthology, a collection of essays about the Tour de France." type="rss" htmlUrl="http://thecyclingpodcast.com/" title="The Cycling Podcast" text="The Cycling Podcast"/>
-    <outline xmlUrl="https://corecursive.libsyn.com/feed" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://feeds.buzzsprout.com/1066066.rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://corecursive.libsyn.com/feed" description="The stories and people behind the code. Hear stories of software development
+from interesting people." type="rss" htmlUrl="http://corecursive.com" title="CoRecursive: Coding Stories" text="CoRecursive: Coding Stories"/>
+    <outline xmlUrl="https://feeds.yle.fi/areena/v1/series/1-50460142.rss?lang=fi&amp;downloadable=true" description="Tarjolla freesi uutisannos puhtaalta lautaselta. Ylänappi auki ja
+ymmärrettävästi. Toivo Haimi ja Marjukka Mattila avaavat tärkeimmät uutiset
+joka tiistai ja torstai. Tämä on sinulle, joka podet uutisallergiaa. Lähetä
+meille WhatsAppia 044 4214823. Keskustele somessa #takaisinpasilaan" type="rss" htmlUrl="https://areena.yle.fi/1-50460142" title="Takaisin Pasilaan" text="Takaisin Pasilaan"/>
     <outline xmlUrl="https://feeds.simplecast.com/gvtxUiIf" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
 promotes fresh technology and fresh voices. Talk and Tech for Developers,
 Life-long Learners, and Technologists." type="rss" htmlUrl="https://www.hanselminutes.com" title="Hanselminutes with Scott Hanselman" text="Hanselminutes with Scott Hanselman"/>
@@ -246,11 +286,13 @@ journalist covering all things crypto, talks with industry pioneers about how
 crypto assets and blockchains will change the way we earn, spend and invest
 our money. Tune in to find out how Web 3.0, the decentralized web, will
 revolutionize our world. Disclosure: I'm a nocoiner." type="rss" htmlUrl="https://unchainedpodcast.com" title="Unchained" text="Unchained"/>
-    <outline xmlUrl="https://foss-north.se/pod/pod-ogg.rss" description="" type="rss" htmlUrl="" title="" text=""/>
+    <outline xmlUrl="https://foss-north.se/pod/pod-ogg.rss" description="The foss-north conference crew discuss free and open source, meet interesting
+guests, and explores various topics around freedoms and source code." type="rss" htmlUrl="https://foss-north.se/pod/" title="foss-north - the pod" text="foss-north - the pod"/>
     <outline xmlUrl="http://www.radiohelsinki.fi/feed/?post_type=rh_podcast&amp;rh_program_id=40344" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="http://areena.yle.fi/api/search.rss?id=1792200&amp;media=audio&amp;ladattavat=1" description="Suomessa asuu viisi miljoonaa ihmistä ja heillä on viisi miljoonaa tapaa elää.
 Tässä ohjelmassa tutustutaan muutamiin niistä. Toimittajina Perttu Häkkinen ja
-Panu Hietaneva." type="rss" htmlUrl="https://areena.yle.fi/1-1792200" title="Perttu Häkkinen" text="Perttu Häkkinen"/>
+Panu Hietaneva. Perttu Häkkisen kuratoidut uusinnat Yle Puheessa 16.2.2021
+alkaen tiistaisin klo 13.02." type="rss" htmlUrl="https://areena.yle.fi/1-1792200" title="Perttu Häkkinen" text="Perttu Häkkinen"/>
     <outline xmlUrl="http://feeds.feedburner.com/SoftSkillsEngineering" description="It takes more than great code to be a great engineer. Soft Skills Engineering
 is a weekly advice podcast for software developers about the non-technical
 stuff that goes into being a great software developer." type="rss" htmlUrl="https://softskills.audio/" title="Soft Skills Engineering" text="Soft Skills Engineering"/>

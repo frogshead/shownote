@@ -67,8 +67,9 @@ Python, developer, and data science space." type="rss" htmlUrl="https://pythonby
     <outline xmlUrl="https://jamesmunns.com/podcast-feed-flac.xml" description="Embedded Rust with James Munns" type="rss" htmlUrl="" title="Embedded Rust with James Munns" text="Embedded Rust with James Munns"/>
     <outline xmlUrl="https://corecursive.libsyn.com/feed" description="" type="rss" htmlUrl="" title="" text=""/>
     <outline xmlUrl="https://pinecast.com/feed/ladybug-podcast" description="Three ladies debugging the tech industry" type="rss" htmlUrl="https://ladybug.dev" title="Ladybug Podcast" text="Ladybug Podcast"/>
-    <outline xmlUrl="http://reverseengineering.libsyn.com/rss" description="Listen and learn about different reverse engineering hardware projects and
-methods as Alvaro (@alvaroprieto) and Jen(@rebelbotjen) talk with guests about
-their work." type="rss" htmlUrl="https://unnamedre.com" title="Unnamed Reverse Engineering Podcast" text="Unnamed Reverse Engineering Podcast"/>
+    
+  <outline xmlUrl="https://newrustacean.com/feed.xml" description="Deep dive teaching episodes, news updates, and interviews with people around
+the Rust community." type="rss" htmlUrl="https://newrustacean.com" title="New Rustacean" text="New Rustacean"/>
+    
   </body>
 </opml>
