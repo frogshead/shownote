@@ -68,7 +68,6 @@ Python, developer, and data science space." type="rss" htmlUrl="https://pythonby
         <outline xmlUrl="https://corecursive.libsyn.com/feed" description="" type="rss" htmlUrl="" title="" text=""/>
         <outline xmlUrl="https://pinecast.com/feed/ladybug-podcast" description="Three ladies debugging the tech industry" type="rss" htmlUrl="https://ladybug.dev" title="Ladybug Podcast" text="Ladybug Podcast"/>
 
-        <outline xmlUrl="http://www.newrustacean.com/feed.xml" description="Deep dive teaching episodes, news updates, and interviews with people around
-the Rust community." type="rss" htmlUrl="https://newrustacean.com" title="New Rustacean" text="New Rustacean"/>
+        <outline xmlUrl="https://rustacean-station.org/podcast.rss" description="Come journey with us into the weird, wonderful, and wily world of Rust." type="rss" htmlUrl="https://rustacean-station.org" title="Rustacean Station" text="Rustacean Station"/>
     </body>
 </opml>
