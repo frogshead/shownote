@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <opml version="2.0">
-  <head>
-    <title>freezing_point</title>
-    <dateCreated>Sat, 13 Mar 2021 14:46:13 +0000</dateCreated>
-  </head>
-  <body>
+    <head>
+        <title>freezing_point</title>
+        <dateCreated>Sat, 13 Mar 2021 14:46:13 +0000</dateCreated>
+    </head>
+    <body>
 
-    <outline xmlUrl="http://testandcode.com/rss" description="Test &amp; Code is a weekly podcast hosted by Brian Okken. The show covers a wide
+        <outline xmlUrl="http://testandcode.com/rss" description="Test &amp; Code is a weekly podcast hosted by Brian Okken. The show covers a wide
 array of topics including software engineering, development, testing, Python
 programming, and many related topics. When we get into the implementation
 specifics, that's usually Python, such as Python packaging, tox, pytest, and
@@ -14,11 +14,11 @@ unittest. However, well over half of the topics are language agnostic, such as
 data science, DevOps, TDD, public speaking, mentoring, feature testing, NoSQL
 databases, end to end testing, automation, continuous integration, development
 methods, Selenium, the testing pyramid, and DevOps." type="rss" htmlUrl="https://testandcode.com" title="Test &amp; Code : Python Testing for Software Engineering" text="Test &amp; Code : Python Testing for Software Engineering"/>
-    <outline xmlUrl="https://contextualelectronics.com/feed/podcast" description="The Contextual Electronics Podcast" type="rss" htmlUrl="https://contextualelectronics.com/feed/podcast/" title="The Contextual Electronics Podcast" text="The Contextual Electronics Podcast"/>
-    <outline xmlUrl="https://feeds.simplecast.com/wFD5mVlw" description="Webbidevaus.fi" type="rss" htmlUrl="http://webbidevaus.fi" title="Webbidevaus.fi" text="Webbidevaus.fi"/>
-    <outline xmlUrl="https://feeds.simplecast.com/MawZsBY4" description="Ikkunastudio" type="rss" htmlUrl="https://www.ikkunastud.io/" title="ikkunastudio" text="ikkunastudio"/>
-    <outline xmlUrl="https://feeds.simplecast.com/fJGOlywC" description="Turvakäräjät" type="rss" htmlUrl="https://turvakarajat.fi/" title="Turvakäräjät" text="Turvakäräjät"/>
-    <outline xmlUrl="http://www.theamphour.com/feed/podcast" description="Chris Gammell and Dave Jones' voices span the chasm of thousands of miles each
+        <outline xmlUrl="https://contextualelectronics.com/feed/podcast" description="The Contextual Electronics Podcast" type="rss" htmlUrl="https://contextualelectronics.com/feed/podcast/" title="The Contextual Electronics Podcast" text="The Contextual Electronics Podcast"/>
+        <outline xmlUrl="https://feeds.simplecast.com/wFD5mVlw" description="Webbidevaus.fi" type="rss" htmlUrl="http://webbidevaus.fi" title="Webbidevaus.fi" text="Webbidevaus.fi"/>
+        <outline xmlUrl="https://feeds.simplecast.com/MawZsBY4" description="Ikkunastudio" type="rss" htmlUrl="https://www.ikkunastud.io/" title="ikkunastudio" text="ikkunastudio"/>
+        <outline xmlUrl="https://feeds.simplecast.com/fJGOlywC" description="Turvakäräjät" type="rss" htmlUrl="https://turvakarajat.fi/" title="Turvakäräjät" text="Turvakäräjät"/>
+        <outline xmlUrl="http://www.theamphour.com/feed/podcast" description="Chris Gammell and Dave Jones' voices span the chasm of thousands of miles each
 and every week to speak to each other and industry experts about where the
 field of electronics is moving. Whether it be a late breaking story about a
 large semiconductor manufacturer, a new piece of must-have test equipment or
@@ -29,47 +29,46 @@ advanced hobbyists working on exciting new projects up through C-level
 executives at a variety of relevant and innovative companies. Tune in to learn
 more about electronics and then join the conversation! Visit The Amp Hour
 website for our back catalog of 150+ episodes." type="rss" htmlUrl="https://theamphour.com" title="The Amp Hour Electronics Podcast" text="The Amp Hour Electronics Podcast"/>
-    <outline xmlUrl="https://hakkerit.libsyn.com/rss" description="Tervetuloa Herrasmieshakkereiden kartanoon takkatulen ääreen. Tässä
+        <outline xmlUrl="https://hakkerit.libsyn.com/rss" description="Tervetuloa Herrasmieshakkereiden kartanoon takkatulen ääreen. Tässä
 ohjelmasarjassa käsittelemme tietoturvaan ja vääjäämättömään kybertuhoon
 liittyviä asioita ja ilmiöitä. Oppaananne verkon alamaailmassa toimivat Suomen
 tietoturvakentän wiralliset wanhukset Mikko Hyppönen ja Tomi Tuominen." type="rss" htmlUrl="http://hakkerit.libsyn.com/website" title="Herrasmieshakkerit" text="Herrasmieshakkerit"/>
-    <outline xmlUrl="http://makingembeddedsystems.libsyn.com/rss" description="Embedded is the show for people who love gadgets. Making them, breaking them,
+        <outline xmlUrl="http://makingembeddedsystems.libsyn.com/rss" description="Embedded is the show for people who love gadgets. Making them, breaking them,
 and everything in between. Weekly interviews with engineers, educators, and
 enthusiasts. Find the show, blog, and more at embedded.fm." type="rss" htmlUrl="https://embedded.fm/" title="Embedded.fm" text="Embedded.fm"/>
-    <outline xmlUrl="https://www.podcastinit.com/feed/mp3/" description="The weekly podcast about the Python programming language, its ecosystem, and
+        <outline xmlUrl="https://www.podcastinit.com/feed/mp3/" description="The weekly podcast about the Python programming language, its ecosystem, and
 its community. Tune in for engaging, educational, and technical discussions
 about the broad range of industries, individuals, and applications that rely
 on Python." type="rss" htmlUrl="https://www.pythonpodcast.com" title="The Python Podcast.__init__" text="The Python Podcast.__init__"/>
-    <outline xmlUrl="http://feeds.feedburner.com/Hanselminutes" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
+        <outline xmlUrl="http://feeds.feedburner.com/Hanselminutes" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
 promotes fresh technology and fresh voices. Talk and Tech for Developers,
 Life-long Learners, and Technologists." type="rss" htmlUrl="https://www.hanselminutes.com" title="Hanselminutes with Scott Hanselman" text="Hanselminutes with Scott Hanselman"/>
-    <outline xmlUrl="https://feeds.transistor.fm/on-the-metal-0294649e-ec23-4eab-975a-9eb13fd94e06" description="As a part of starting Oxide Computer Company, Bryan Cantrill and Jess Frazelle
+        <outline xmlUrl="https://feeds.transistor.fm/on-the-metal-0294649e-ec23-4eab-975a-9eb13fd94e06" description="As a part of starting Oxide Computer Company, Bryan Cantrill and Jess Frazelle
 decided to also create the podcast that they always wanted. Joined frequently
 by their boss, Steve Tuck, Bryan and Jess interview incredible guests
 retelling stories of adventure at the hardware/software interface. It’s
 unapologetically technical and as Jess says, “the nerdiest podcast on the face
 of the planet” -- but if you're their kind of nerd, you'll find yourself
 hanging on every word!" type="rss" htmlUrl="https://onthemetal.fm" title="On The Metal" text="On The Metal"/>
-    <outline xmlUrl="http://feeds.podtrac.com/9dPm65vdpLL1" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
+        <outline xmlUrl="http://feeds.podtrac.com/9dPm65vdpLL1" description="Hanselminutes is Fresh Air for Developers. A weekly commute-time podcast that
 promotes fresh technology and fresh voices. Talk and Tech for Developers,
 Life-long Learners, and Technologists." type="rss" htmlUrl="https://www.hanselminutes.com" title="Hanselminutes with Scott Hanselman" text="Hanselminutes with Scott Hanselman"/>
-    <outline xmlUrl="https://reverseengineering.libsyn.com/rss" description="Unnamed reverse engineering podcast" type="rss" htmlUrl="" title="Unnamed reverse engineering podcast" text="Unnamed reverse engineering podcast"/>
-    <outline xmlUrl="https://talkpython.fm/episodes/rss" description="Talk Python to Me is a weekly podcast hosted by Michael Kennedy. The show
+        <outline xmlUrl="https://reverseengineering.libsyn.com/rss" description="Unnamed reverse engineering podcast" type="rss" htmlUrl="" title="Unnamed reverse engineering podcast" text="Unnamed reverse engineering podcast"/>
+        <outline xmlUrl="https://talkpython.fm/episodes/rss" description="Talk Python to Me is a weekly podcast hosted by Michael Kennedy. The show
 covers a wide array of Python topics as well as many related topics. Our goal
 is to bring you the human story behind the Python packages and frameworks you
 know and love." type="rss" htmlUrl="https://talkpython.fm/" title="Talk Python To Me" text="Talk Python To Me"/>
-    <outline xmlUrl="https://feeds.simplecast.com/C6NQglnL" description="In-depth interviews with indie game developers creating titles with the Rust
+        <outline xmlUrl="https://feeds.simplecast.com/C6NQglnL" description="In-depth interviews with indie game developers creating titles with the Rust
 programming language. We cover technical topics as well as the business of
 open source and commercial indie games development." type="rss" htmlUrl="https://rustgamedev.com" title="Rust Game Dev" text="Rust Game Dev"/>
-    <outline xmlUrl="https://pythonbytes.fm/episodes/rss" description="Python Bytes is a weekly podcast hosted by Michael Kennedy and Brian Okken.
+        <outline xmlUrl="https://pythonbytes.fm/episodes/rss" description="Python Bytes is a weekly podcast hosted by Michael Kennedy and Brian Okken.
 The show is a short discussion on the headlines and noteworthy news in the
 Python, developer, and data science space." type="rss" htmlUrl="https://pythonbytes.fm/" title="Python Bytes" text="Python Bytes"/>
-    <outline xmlUrl="https://jamesmunns.com/podcast-feed-flac.xml" description="Embedded Rust with James Munns" type="rss" htmlUrl="" title="Embedded Rust with James Munns" text="Embedded Rust with James Munns"/>
-    <outline xmlUrl="https://corecursive.libsyn.com/feed" description="" type="rss" htmlUrl="" title="" text=""/>
-    <outline xmlUrl="https://pinecast.com/feed/ladybug-podcast" description="Three ladies debugging the tech industry" type="rss" htmlUrl="https://ladybug.dev" title="Ladybug Podcast" text="Ladybug Podcast"/>
-    
-  <outline xmlUrl="https://newrustacean.com/feed.xml" description="Deep dive teaching episodes, news updates, and interviews with people around
+        <outline xmlUrl="https://jamesmunns.com/podcast-feed-flac.xml" description="Embedded Rust with James Munns" type="rss" htmlUrl="" title="Embedded Rust with James Munns" text="Embedded Rust with James Munns"/>
+        <outline xmlUrl="https://corecursive.libsyn.com/feed" description="" type="rss" htmlUrl="" title="" text=""/>
+        <outline xmlUrl="https://pinecast.com/feed/ladybug-podcast" description="Three ladies debugging the tech industry" type="rss" htmlUrl="https://ladybug.dev" title="Ladybug Podcast" text="Ladybug Podcast"/>
+
+        <outline xmlUrl="http://www.newrustacean.com/feed.xml" description="Deep dive teaching episodes, news updates, and interviews with people around
 the Rust community." type="rss" htmlUrl="https://newrustacean.com" title="New Rustacean" text="New Rustacean"/>
-    
-  </body>
+    </body>
 </opml>
