@@ -70,5 +70,6 @@ Python, developer, and data science space." type="rss" htmlUrl="https://pythonby
 
         <outline xmlUrl="https://rustacean-station.org/podcast.rss" description="Come journey with us into the weird, wonderful, and wily world of Rust." type="rss" htmlUrl="https://rustacean-station.org" title="Rustacean Station" text="Rustacean Station"/>
         <outline xmlUrl="https://gotime.fm/rss" description="Go time podcast" type="rss" htmlUrl="https://rustacean-station.org" title="Go time podcast" text="Go time podcast"/>
+        <outline xmlUrl="https://feeds.megaphone.fm/vikasietotila" description="Vikasietotila" type="rss" htmlUrl="https://feeds.megaphone.fm/vikasietotila" title="Vikasietotila podcast" text="Vikasietotila podcast"/>
     </body>
 </opml>
