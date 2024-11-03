@@ -1,4 +1,6 @@
-use std::{env, io, str::FromStr};
+use std::alloc::System;
+use std::io::{empty, Read};
+use std::{env, io, str::FromStr, fs::File};
 
 use opml::{self, OPML};
 use webbrowser;
@@ -71,7 +73,7 @@ fn open_urls_to_browser(url: &str) -> () {
 }
 
 fn get_podcasts(file_name: &str) -> Vec<Podcast> {
-    let xml: String = reqwest::blocking::get(file_name).expect("Can not fetch the opml from url").text().unwrap();
+    let xml= reqwest::blocking::get(file_name).expect("Can not fetch the opml from url").text().expect("Cannot convert response to text file");
     let opml = OPML::from_str(&xml).expect("Non Valid OPML/XML file");
     let mut podcasts = vec![];
     for outline in opml.body.outlines {
