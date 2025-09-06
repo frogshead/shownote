@@ -80,6 +80,8 @@ jobs:
 
     - name: Build release binary
       run: cargo build --release --target ${{ matrix.target }}
+      env:
+        RUSTFLAGS: "-A dead_code"
 
     - name: Prepare artifact (Unix)
       if: matrix.os != 'windows-latest'
