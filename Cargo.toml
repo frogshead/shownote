@@ -13,3 +13,5 @@ simple_logger = "5.0.0"
 reqwest = { version = "0.12.9", features = ["blocking", "json"] }
 select = "0.6.0"
 webbrowser = "1.0.2"
+ratatui = "0.28.1"
+crossterm = "0.28.1"
