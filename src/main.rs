@@ -48,22 +48,31 @@ fn main() {
     println!("{:?}", args);
     let podcasts = get_podcasts(&podcasts_url);
     let podcast_selection = print_podcasts(&podcasts);
-    let selected_podcast = podcasts.iter().nth(podcast_selection).unwrap();
     
-    match get_episodes(selected_podcast) {
-        Ok(episodes) => {
-            let episode_selection = select_episode(&episodes);
-            if let Some(selected_episode) = episodes.get(episode_selection) {
-                open_episode_links(selected_episode);
+    if let Some(podcast_index) = podcast_selection {
+        let selected_podcast = podcasts.iter().nth(podcast_index).unwrap();
+        
+        match get_episodes(selected_podcast) {
+            Ok(episodes) => {
+                let episode_selection = select_episode(&episodes);
+                if let Some(episode_index) = episode_selection {
+                    if let Some(selected_episode) = episodes.get(episode_index) {
+                        open_episode_links(selected_episode);
+                    }
+                } else {
+                    println!("Exiting without opening any links.");
+                }
+            }
+            Err(e) => {
+                println!("Error fetching episodes: {}", e);
             }
         }
-        Err(e) => {
-            println!("Error fetching episodes: {}", e);
-        }
+    } else {
+        println!("Exiting without opening any links.");
     }
 }
 
-fn print_podcasts(podcasts: &Vec<Podcast>) -> usize {
+fn print_podcasts(podcasts: &Vec<Podcast>) -> Option<usize> {
     match setup_terminal() {
         Ok(mut terminal) => {
             match run_podcast_selector(&mut terminal, podcasts) {
@@ -89,7 +98,7 @@ fn print_podcasts(podcasts: &Vec<Podcast>) -> usize {
     }
 }
 
-fn fallback_podcast_selection(podcasts: &Vec<Podcast>) -> usize {
+fn fallback_podcast_selection(podcasts: &Vec<Podcast>) -> Option<usize> {
     for (pos, podcast) in podcasts.iter().enumerate() {
         println!(
             "[{}] {} - {}",
@@ -98,11 +107,19 @@ fn fallback_podcast_selection(podcasts: &Vec<Podcast>) -> usize {
             podcast.url.as_ref().unwrap_or(&"No URL".to_string())
         );
     }
-    println!("Enter the number of the podcast you want to select:");
+    println!("Enter the number of the podcast you want to select (or 'q' to quit):");
     let mut buffer = String::new();
     io::stdin().read_line(&mut buffer).unwrap();
-    let selection: usize = buffer.trim().parse().unwrap_or(0);
-    selection.min(podcasts.len().saturating_sub(1))
+    let input = buffer.trim();
+    
+    if input == "q" || input == "quit" {
+        return None;
+    }
+    
+    match input.parse::<usize>() {
+        Ok(selection) => Some(selection.min(podcasts.len().saturating_sub(1))),
+        Err(_) => Some(0)
+    }
 }
 fn get_episodes(podcast: &Podcast) -> Result<Vec<Episode>, Box<dyn std::error::Error>> {
     println!("Fetching podcast feed {}... ", podcast.name);
@@ -125,7 +142,7 @@ fn get_episodes(podcast: &Podcast) -> Result<Vec<Episode>, Box<dyn std::error::E
     
     Ok(episodes)
 }
-fn select_episode(episodes: &[Episode]) -> usize {
+fn select_episode(episodes: &[Episode]) -> Option<usize> {
     match setup_terminal() {
         Ok(mut terminal) => {
             match run_episode_selector(&mut terminal, episodes) {
@@ -151,16 +168,24 @@ fn select_episode(episodes: &[Episode]) -> usize {
     }
 }
 
-fn fallback_episode_selection(episodes: &[Episode]) -> usize {
+fn fallback_episode_selection(episodes: &[Episode]) -> Option<usize> {
     for (pos, episode) in episodes.iter().enumerate() {
         let date_str = episode.pub_date.as_ref().map(|s| s.as_str()).unwrap_or("No date");
         println!("[{}] {} ({})", pos, episode.title, date_str);
     }
-    println!("Enter the number of the episode you want to select:");
+    println!("Enter the number of the episode you want to select (or 'q' to quit):");
     let mut buffer = String::new();
     io::stdin().read_line(&mut buffer).unwrap();
-    let selection: usize = buffer.trim().parse().unwrap_or(0);
-    selection.min(episodes.len().saturating_sub(1))
+    let input = buffer.trim();
+    
+    if input == "q" || input == "quit" {
+        return None;
+    }
+    
+    match input.parse::<usize>() {
+        Ok(selection) => Some(selection.min(episodes.len().saturating_sub(1))),
+        Err(_) => Some(0)
+    }
 }
 
 fn setup_terminal() -> Result<Terminal<CrosstermBackend<io::Stdout>>, Box<dyn std::error::Error>> {
@@ -238,7 +263,7 @@ impl EpisodeApp {
     }
 }
 
-fn run_episode_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, episodes: &[Episode]) -> Result<usize, Box<dyn std::error::Error>> {
+fn run_episode_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, episodes: &[Episode]) -> Result<Option<usize>, Box<dyn std::error::Error>> {
     let mut app = EpisodeApp::new(episodes);
 
     loop {
@@ -247,11 +272,11 @@ fn run_episode_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, e
         if let Event::Key(key) = event::read()? {
             if key.kind == KeyEventKind::Press {
                 match key.code {
-                    KeyCode::Char('q') | KeyCode::Esc => return Ok(0),
+                    KeyCode::Char('q') | KeyCode::Esc => return Ok(None),
                     KeyCode::Down | KeyCode::Char('j') => app.next(),
                     KeyCode::Up | KeyCode::Char('k') => app.previous(),
                     KeyCode::Enter => {
-                        return Ok(app.state.selected().unwrap_or(0));
+                        return Ok(Some(app.state.selected().unwrap_or(0)));
                     }
                     _ => {}
                 }
@@ -300,7 +325,7 @@ fn open_episode_links(episode: &Episode) {
     }
 }
 
-fn run_podcast_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, podcasts: &Vec<Podcast>) -> Result<usize, Box<dyn std::error::Error>> {
+fn run_podcast_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, podcasts: &Vec<Podcast>) -> Result<Option<usize>, Box<dyn std::error::Error>> {
     let mut app = PodcastApp::new(podcasts);
 
     loop {
@@ -309,11 +334,11 @@ fn run_podcast_selector(terminal: &mut Terminal<CrosstermBackend<io::Stdout>>, p
         if let Event::Key(key) = event::read()? {
             if key.kind == KeyEventKind::Press {
                 match key.code {
-                    KeyCode::Char('q') | KeyCode::Esc => return Ok(0),
+                    KeyCode::Char('q') | KeyCode::Esc => return Ok(None),
                     KeyCode::Down | KeyCode::Char('j') => app.next(),
                     KeyCode::Up | KeyCode::Char('k') => app.previous(),
                     KeyCode::Enter => {
-                        return Ok(app.state.selected().unwrap_or(0));
+                        return Ok(Some(app.state.selected().unwrap_or(0)));
                     }
                     _ => {}
                 }
