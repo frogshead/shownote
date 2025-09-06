@@ -1,0 +1,125 @@
+name: Cross-platform Release Build
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: Build for ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          # Linux x64
+          - target: x86_64-unknown-linux-gnu
+            os: ubuntu-latest
+            name: shownotes-linux-x64
+            
+          # Linux ARM64
+          - target: aarch64-unknown-linux-gnu
+            os: ubuntu-latest
+            name: shownotes-linux-arm64
+            
+          # macOS x64
+          - target: x86_64-apple-darwin
+            os: macos-latest
+            name: shownotes-macos-x64
+            
+          # macOS ARM64
+          - target: aarch64-apple-darwin
+            os: macos-latest
+            name: shownotes-macos-arm64
+            
+          # Windows x64
+          - target: x86_64-pc-windows-msvc
+            os: windows-latest
+            name: shownotes-windows-x64.exe
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Rust
+      uses: actions-rust-lang/setup-rust-toolchain@v1
+      with:
+        toolchain: stable
+        target: ${{ matrix.target }}
+
+    - name: Install cross-compilation dependencies (Linux ARM64)
+      if: matrix.target == 'aarch64-unknown-linux-gnu'
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-aarch64-linux-gnu
+
+    - name: Configure cross-compilation (Linux ARM64)
+      if: matrix.target == 'aarch64-unknown-linux-gnu'
+      run: |
+        echo "[target.aarch64-unknown-linux-gnu]" >> ~/.cargo/config.toml
+        echo "linker = \"aarch64-linux-gnu-gcc\"" >> ~/.cargo/config.toml
+
+    - name: Cache cargo registry
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+        key: ${{ runner.os }}-cargo-${{ matrix.target }}-${{ hashFiles('**/Cargo.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-cargo-${{ matrix.target }}-
+          ${{ runner.os }}-cargo-
+
+    - name: Build release binary
+      run: cargo build --release --target ${{ matrix.target }}
+
+    - name: Prepare artifact (Unix)
+      if: matrix.os != 'windows-latest'
+      run: |
+        mkdir -p artifacts
+        cp target/${{ matrix.target }}/release/shownotes artifacts/${{ matrix.name }}
+        strip artifacts/${{ matrix.name }} || true
+        chmod +x artifacts/${{ matrix.name }}
+
+    - name: Prepare artifact (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        mkdir artifacts
+        copy target\${{ matrix.target }}\release\shownotes.exe artifacts\${{ matrix.name }}
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ${{ matrix.name }}
+        path: artifacts/${{ matrix.name }}
+        retention-days: 30
+
+  create-release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: ./artifacts
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: ./artifacts/**/shownotes-*
+        generate_release_notes: true
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
